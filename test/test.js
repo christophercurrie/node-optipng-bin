@@ -19,7 +19,7 @@ describe('optipng()', function () {
 	});
 
 	it('should rebuild the optipng binaries', function (cb) {
-		var bin = new BinWrapper({ bin: 'optipng', dest: path.join(__dirname, 'tmp') });
+		var bin = new BinWrapper({ bin: 'optipng', version: '0.7.4', global: false, dest: path.join(__dirname, 'tmp') });
 		var bs = './configure --with-system-zlib ' +
 				 '--mandir="' + path.join(bin.dest, 'man') + '" ' +
 				 '--bindir="' + bin.dest + '" && ' +
